@@ -3,8 +3,8 @@ For teladoc coding challenge
 
 ## Installation
 
-This .py only require one package needs to be installed. Other packages are default python packages. I just uploaded chromedriver.exe into my repository in second push.
-Please download everything from the latest branch name Chromedriverupload.
+This .py only require one package needs to be installed. Other packages are default python packages. I just uploaded chromedriver.exe(ChromeDriver 95.0.4638.17) into my repository via second push.
+Please download everything from the latest branch name Chromedriverupload. If the chromedriver.exe doesn't fit your local chrome version, please download a chrome driver that works for you from here https://chromedriver.chromium.org/downloads.
 
 ```bash
 python -m pip install selenium
