@@ -4,6 +4,7 @@ For teladoc coding challenge
 ## Installation
 
 This .py only require one package needs to be installed. Other packages are default python packages. I just uploaded chromedriver.exe into my repository in second push.
+Please download everything from the latest branch name Chromedriverupload.
 
 ```bash
 python -m pip install selenium
