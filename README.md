@@ -16,7 +16,7 @@ python -m pip install selenium
 Two scripts are loaded here. One is automatically fill out all the metadata and upload a record to the website. After upload is complete, it will verify if the data is correct on the UI. The script name is UITest_AddUser.py. Another one is for deleting a record from the website automatically, as well as verifying if the data has been removed. Script name is UITest_DeleteUser.py.
 
 1. UITest_AddUser.py
-This script is able to fill out first name, last name, username, Customer, Role, email address and phone number in add user mini app. After the key in process is complete, it will automatically go back the UI and self test if all the metadata has been loaded into the system correctly. The output can specify which ones are loaded on the UI correctly and which ones are not.
+This script is able to fill out first name, last name, username, Customer, Role, email address and phone number via "add user" mini app. After the key in process is complete, it will automatically go back the UI and self test if all the metadata has been loaded into the system correctly. The output can specify which ones are loaded on the UI correctly and which ones are not.
 
 Here's a output from the script:
 Please find the difference between UI and the expected output.
