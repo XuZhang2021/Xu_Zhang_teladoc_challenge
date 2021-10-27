@@ -12,7 +12,8 @@ class UItest():
         self.option.add_experimental_option('detach', True)
         
     def openPage(self):
-        self.driver = webdriver.Chrome('E:/all py/chrome-selenium-python-master/chromedriver.exe', options=self.option)
+        webdriverlocation = 'E:/all py/chrome-selenium-python-master/chromedriver.exe' #Download the webdriver from Github and change the location to your location drive where you have the webdriver.exe saved at.
+        self.driver = webdriver.Chrome(webdriverlocation, options=self.option)
         self.driver.get('https://www.way2automation.com/angularjs-protractor/webtables/')
 
         time.sleep(2)  # Let the user actually see something!
@@ -111,7 +112,7 @@ class UItest():
             diff = response_fromUI.keys() & targetUserData.keys()
             diff_vals = [(k, response_fromUI[k], targetUserData[k]) for k in diff if response_fromUI[k] != targetUserData[k]]
             if diff_vals:
-                print('Please find the differnce between UI and the expected output.')
+                print('Please find the differece between UI and the expected output.')
                 print("{:<20}|{:<20}|{:<20}".format("Metadata Name", "Website value", "Expected value")) #Align all the column subject.
                 for i in diff_vals:
                     print("{:<20} {:<20} {:<20}".format(*i)) #Align all the values.
