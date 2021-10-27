@@ -1,8 +1,5 @@
 # Xu_Zhang_teladoc_challenge
 For teladoc coding challenge 
-# Foobar
-
-Foobar is a Python library for dealing with word pluralization.
 
 ## Installation
 
