@@ -11,7 +11,7 @@ class UItest():
         self.option = webdriver.ChromeOptions()
         self.option.add_experimental_option('detach', True)
         
-    def openpage(self):
+    def openPage(self):
         self.driver = webdriver.Chrome('E:/all py/chrome-selenium-python-master/chromedriver.exe', options=self.option)
         self.driver.get('https://www.way2automation.com/angularjs-protractor/webtables/')
 
@@ -62,16 +62,30 @@ class UItest():
         
         rawdata = self.driver.find_elements_by_xpath("/html/body/table/tbody/tr[1]/td") #Retrive data after keye into the webpage.
 
-        response = []
+        response_ori = []
 
         for r in rawdata:
-            response.append(r.text)
+            response_ori.append(r.text)
 
-        response = list(filter(None, response))
-        #print(response)
+        print(response_ori)
+
+        #response = list(filter(None, response))
+        response = []
+
+        response.append(response_ori[0]) #append first name
+        response.append(response_ori[1]) #append last name
+        response.append(response_ori[2]) #append username
+        response.append(response_ori[4]) #append Customer
+        response.append(response_ori[5]) #append Role
+        response.append(response_ori[6]) #append email address
+        response.append(response_ori[7]) #append phone number
+
+        print(response) 
+
         response_lib = {'First Name':'',
                      'Last Name':'',
                      'User Name':'',
+                     'Company':'',
                      'Role':'',
                      'Email':'',
                      'Phone Number':''
@@ -83,54 +97,28 @@ class UItest():
         return response_fromUI
     
     def verifyData(self):
-        targetUserData = {'First Name':'1FirstName Test',
-                     'Last Name':'1LastName Test1',
-                     'User Name':'1UserName Test',
-                     'Role':'1Admin',
-                     'Email':'1E-mailTest@Test.com',
-                     'Phone Number':'19040001234'
-                         }
-        #['FirstName Test', 'LastName Test', 'UserName Test', 'Admin', 'E-mailTest@Test.com', '9040001234'] # Set up a correct list of data to verify if UI returns the same.
+        targetUserData = {'First Name':'FirstName Test',
+                     'Last Name':'LastName Test',
+                     'User Name':'UserName Test',
+                     'Company':'Company BBB',
+                     'Role':'Admin',
+                     'Email':'E-mailTest@Test.com',
+                     'Phone Number':'9040001234'
+                         } #Set these as the actual test data in a library.
         if response_fromUI is None:
             ('Please check UI, it is showing empty.')
         else:
             diff = response_fromUI.keys() & targetUserData.keys()
             diff_vals = [(k, response_fromUI[k], targetUserData[k]) for k in diff if response_fromUI[k] != targetUserData[k]]
-            if diff_vals: 
-                print('Please find the differnce between UI and the expected output {}.'.format(diff_vals))
+            if diff_vals:
+                print('Please find the differnce between UI and the expected output.')
+                print("{:<20}|{:<20}|{:<20}".format("Metadata Name", "Website value", "Expected value")) #Align all the column subject.
+                for i in diff_vals:
+                    print("{:<20} {:<20} {:<20}".format(*i)) #Align all the values.
             else:
                 print('The UI shows the expected results.')
 
         
 if __name__ == "__main__":
-    UItest().openpage()
+    UItest().openPage()
     UItest().verifyData()
-
-
-
-
-
-
-# search_box = driver.find_element_by_id('menu2').click()
-# time.sleep(3)
-
-# driver.find_elements_by_name('seimei')[1].click()
-# time.sleep(3)
-
-# driver.find_element_by_name('submit_ranking').click()
-# time.sleep(3)
-
-# with open('names.txt', 'w') as w:
-#     while True:
-#         soup = BeautifulSoup(driver.page_source, 'html.parser')
-#         table = soup.find_all('td', attrs={'class': None})
-#         names = [str(c.contents[0]) for c in soup.find_all('td', attrs={'class': None})]
-#         str_names = '\n'.join(names)
-#         print(str_names)
-#         w.write(str_names)
-#         w.flush()
-#         driver.find_elements_by_class_name('submit_button')[-1].click()
-        
-#         time.sleep(3)
-
-# driver.quit()
