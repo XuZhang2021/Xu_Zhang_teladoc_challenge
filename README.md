@@ -12,7 +12,7 @@ python -m pip install selenium
 ## Usage
 
 ```python
-Two scripts are loaded here. One is for UI auto fill all the metadata to load a record on the website, name UITest_AddUser.py. Another one is for delete a delete a record from the website automatically, name UITest_DeleteUser.py.
+Two scripts are loaded here. One is for UI auto fill all the metadata for uploading a record on the website, name UITest_AddUser.py. Another one is for delete a delete a record from the website automatically, name UITest_DeleteUser.py.
 
 1. UITest_AddUser.py
 This script is able to fill out first name, last name, username, Customer, Role, email address and phone number in add user mini app. After the key in process is complete, it will automatically go back the UI and self test if all the metadata has been loaded into the system correctly. The output can specify which ones are loaded on the UI correctly and which ones are not.
