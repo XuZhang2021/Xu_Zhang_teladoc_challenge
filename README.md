@@ -28,7 +28,7 @@ Company                                   Company BBB
 As we can see that company value was not loaded into the system even though I have selected a value during the upload process, which is a bug from my point of view.
 
 2. UITest_DeleteUser.py
-Running this script can delete Mark	Novak from the UI. After delete it, it will run another argument to verify if Novak has been removed from the list. It will print 'Target deleted' on the console if the record has been removed and will return 'Target not deleted' if not.
+Running this script can delete Mark Novak from the UI. After delete it, it will run another argument to verify if Novak has been removed from the list. It will print 'Target deleted' on the console if the record has been removed and will return 'Target not deleted' if not.
 ```
 
 ## Contributing
