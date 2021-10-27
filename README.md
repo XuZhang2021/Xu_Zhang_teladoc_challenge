@@ -3,7 +3,7 @@ For teladoc coding challenge
 
 ## Installation
 
-This .py only require one package needs to be installed. Other packages are default python packages.
+This .py only require one package needs to be installed. Other packages are default python packages. I just uploaded chromedriver.exe into my repository in second push.
 
 ```bash
 python -m pip install selenium
