@@ -1,7 +1,5 @@
 # Xu_Zhang_teladoc_challenge
 For teladoc coding challenge 
-# Xu_Zhang_teladoc_challenge
-For teladoc coding challenge 
 
 ## Installation
 
